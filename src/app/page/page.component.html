@@ -1,0 +1,27 @@
+
+<header (valueSearch)='getDrink($event)'></header>
+
+<div class=container>
+    <div class="row">
+        <div class="col-sm-12 col-mb-12 col-lg-12 col-xl-12" *ngFor="let item of bebidas">
+            <div class="col-sm-5 col-mb-5 col-lg-5 col-xl-5">
+                <figure>
+                    <img title="{{item?.overview}}" src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="">
+                </figure>
+            </div>
+            <div class="col-sm-7 col-mb-7 col-lg-7 col-xl-7">
+                <div class=info>
+                    <p><b>Lançamento:<br></b> {{item?.release_date}}</p>
+                    <p><b>Idioma:<br></b> {{item?.original_language}}</p>
+                    <div class=popularidade>
+                        <img src="/assets/star.png" alt="">
+                        {{item?.popularity}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+           
