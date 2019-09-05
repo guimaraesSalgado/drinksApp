@@ -19,7 +19,7 @@ export class PageComponent implements OnInit {
   getDrink(event) {
     const bebida = event;
     this.drinkService.buscarDrink(bebida).then(res => {
-      this.bebidas = res.results;
+      this.bebidas = res.drinks;
       console.log(res);
     });
   }

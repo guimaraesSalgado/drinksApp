@@ -2,16 +2,22 @@
   <div class="row d-flex align-items-center">
     <div class="col-sm-2 col-mb-2 col-lg-2 col-xl-2">
       <figure>
-        <img src="assets/image/logotipo-fgs.png" alt="logotipo Fernanda Guimaraes" title="logotipo Fernanda Guimraes">
+        <img src="assets/image/logotipo-fgs.png" alt="Fernanda Guimaraes" title="Fernanda Guimraes">
       </figure>
     </div>
     <div class="col-sm-10 col-mb-10 col-lg-10 col-xl-10">
-      <input 
-        id=search 
-        name="search" 
-        (keyup)="getDrink($event)"
-        placeholder="Encontre o melhor drink para sua festa!" 
-        type="search">
+      <form action="">
+        <div class="form-row icon">
+          <i class="fas fa-search"></i>
+          <input 
+            class="form-control"
+            id=search 
+            name="search" 
+            (keyup)="getDrink($event)"
+            placeholder="Encontre o melhor drink para sua festa!" 
+            type="search">
+        </div>
+      </form>
     </div>
   </div>
 </div>
