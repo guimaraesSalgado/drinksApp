@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'header',
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  getDrink(event) {
+  pesquisarDrink(event) {
     const bebida = event.target.value;
     this.valueSearch.emit(bebida);
   }

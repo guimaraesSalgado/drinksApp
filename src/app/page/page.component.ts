@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DrinkService } from '../service/drink.service';
+import { Bebidas } from 'src/app/modal/bebidas.interface';
 
 @Component({
   selector: 'page',
@@ -10,18 +11,26 @@ export class PageComponent implements OnInit {
 
   [x: string]: any;
   bebidas = [];
+  list: Bebidas[];
 
   constructor(private drinkService: DrinkService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.drinkService.getData()
+      .subscribe((drinks: any) => {
+        this.list = drinks.drinks;
+      });
   }
 
-  getDrink(event) {
+
+
+  pesquisarDrink(event) {
     const bebida = event;
     this.drinkService.buscarDrink(bebida).then(res => {
       this.bebidas = res.drinks;
       console.log(res);
     });
   }
+
 
 }

@@ -1,5 +1,5 @@
 
-<header (valueSearch)='getDrink($event)'></header>
+<header (valueSearch)='pesquisarDrink($event)'></header>
 
 <section>
     <div class="callPage">
@@ -9,13 +9,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-mb-12 col-lg-12 col-xl-12 box" *ngFor="let item of bebidas">
-            <div class="col-sm-4 col-mb-4 col-lg-4 col-xl-4 px-0">
+        <div class="col-sm-12 col-mb-12 col-lg-12 col-xl-12 box" *ngFor="let item of list">
+            <div class="col-sm-5 col-mb-5 col-lg-4 col-xl-4 px-0">
                 <figure class="mb-0">
                         <img itemprop="image" title="Este é o drink {{item?.strDrink}}" [src]="item.strDrinkThumb" alt="">
                 </figure>
             </div>
-            <div class="col-sm-8 col-mb-8 col-lg-8 col-xl-8 px-0">
+            <div class="col-sm-7 col-mb-7 col-lg-8 col-xl-8 px-0">
                 <div itemscope itemtype="http://schema.org/Recipe" class=name>
                     <h1 itemprop="name">
                     {{item?.strDrink}}
@@ -37,7 +37,7 @@
                     </div> 
                     <div class="instruction">
                         <h3>Modo de preparo:</h3>   
-                        <h5 itemprop="instruction">{{item?.strInstructions}}</h5>
+                        <h5 itemprop="instruction" class="mb-0">{{item?.strInstructions}}</h5>
                     </div>          
 
                 </div>
