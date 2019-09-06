@@ -23,6 +23,6 @@ export class DrinkService {
        }
 
        buscarDrink(strDrink: string): Promise<any> {
-       return this.http.get(`${this.url}&query=${strDrink}`).toPromise();
+       return this.http.get(`${this.url}${strDrink}`).toPromise();
     }
   }

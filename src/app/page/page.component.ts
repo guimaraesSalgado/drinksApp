@@ -10,7 +10,6 @@ import { Bebidas } from 'src/app/modal/bebidas.interface';
 export class PageComponent implements OnInit {
 
   [x: string]: any;
-  bebidas = [];
   list: Bebidas[];
 
   constructor(private drinkService: DrinkService) { }
@@ -27,7 +26,7 @@ export class PageComponent implements OnInit {
   pesquisarDrink(event) {
     const bebida = event;
     this.drinkService.buscarDrink(bebida).then(res => {
-      this.bebidas = res.drinks;
+      this.list = res.drinks;
       console.log(res);
     });
   }
