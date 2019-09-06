@@ -4,26 +4,39 @@ header
     padding: 16px 0
 
 /* Drink Box */
+.table-image 
+    grid-area: image
+.table-title 
+    grid-area: title
+.table-item
+    grid-area: item
+.table-instruction
+    grid-area: instruction
+
 .box 
-    display: flex
-    align-items: center
-    justify-content: space-between
+    align-items: center;
     border: 1px solid
+    display: grid;
+    grid-template-areas: "image image title title title title" "image image item item item item" "image image instruction instruction instruction instruction"
+    grid-gap: 10px
+    margin: 15px 0
     padding: 15px 20px
-    margin: 15px
+
 
 figure 
-    max-width: 84%
+    width: 282px
+    height: 282px
+    margin-right: 16px
     img
         max-width: 100%
 
-.itens 
-    margin: 22px 0;
-    .ingredient 
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        width: 36%;
+
+.ingredient 
+    display: grid;
+    grid-template-areas: "div div"
+    grid-gap: 10px
+
+
 
 /* Footer */
 footer 

@@ -8,39 +8,42 @@
 </section>
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-mb-12 col-lg-12 col-xl-12 box" *ngFor="let item of list">
-            <div class="col-sm-5 col-mb-5 col-lg-4 col-xl-4 px-0">
+    <div class="table">
+        <div class="table-box box" *ngFor="let item of list">
+            <div class="table-image">
                 <figure class="mb-0">
                         <img itemprop="image" title="Este é o drink {{item?.strDrink}}" [src]="item.strDrinkThumb" alt="">
                 </figure>
             </div>
-            <div class="col-sm-7 col-mb-7 col-lg-8 col-xl-8 px-0">
+            <div class="table-title">
                 <div itemscope itemtype="http://schema.org/Recipe" class=name>
                     <h1 itemprop="name">
                     {{item?.strDrink}}
                     </h1>
-                    <div class="itens">
-                        <h3>Ingredientes:</h3>
-                        <div class="ingredient">
-                            <div class="columnOne">
-                                <h5 itemprop="ingredient">{{item?.strIngredient1}}</h5> 
-                                <h5 itemprop="ingredient">{{item?.strIngredient2}}</h5>            
-                                <h5 itemprop="ingredient">{{item?.strIngredient3}}</h5>
-                            </div>      
-                            <div class="columnTwo">       
-                                <h5 itemprop="ingredient">{{item?.strIngredient5}}</h5>
-                                <h5 itemprop="ingredient">{{item?.strIngredient5}}</h5>
-                                <h5 itemprop="ingredient">{{item?.strIngredient6}}</h5>
-                            </div> 
-                        </div>
-                    </div> 
-                    <div class="instruction">
-                        <h3>Modo de preparo:</h3>   
-                        <h5 itemprop="instruction" class="mb-0">{{item?.strInstructions}}</h5>
-                    </div>          
-
                 </div>
+            </div>
+            <div class="table-item">
+                <div class="itens">
+                    <h3>Ingredientes:</h3>
+                    <div class="ingredient">
+                        <div class="columnOne">
+                            <h5 itemprop="ingredient">{{item?.strIngredient1}}</h5> 
+                            <h5 itemprop="ingredient">{{item?.strIngredient2}}</h5>            
+                            <h5 itemprop="ingredient">{{item?.strIngredient3}}</h5>
+                        </div>      
+                        <div class="columnTwo">       
+                            <h5 itemprop="ingredient">{{item?.strIngredient5}}</h5>
+                            <h5 itemprop="ingredient">{{item?.strIngredient5}}</h5>
+                            <h5 itemprop="ingredient">{{item?.strIngredient6}}</h5>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="table-instruction">
+                <div class="instruction">
+                    <h3>Modo de preparo:</h3>   
+                    <h5 itemprop="instruction" class="mb-0">{{item?.strInstructions}}</h5>
+                </div>          
             </div>
         </div>
     </div>
