@@ -6,12 +6,47 @@ header
 /* Drink Box */
 .table-image 
     grid-area: image
+    width: 300px
+@media screen and (max-width: 765px)
+    .table-image
+        width: 140px;
+@media screen and (max-width: 325px)
+    .table-image
+        width: 140px;
+
 .table-title 
     grid-area: title
+    width: 765px
+@media screen and (max-width: 765px)
+    .table-title
+        width: 228px;
+@media screen and (max-width: 325px)
+    .table-title
+        width: 228px;
 .table-item
     grid-area: item
+@media screen and (min-width: 765px)
+    .table-item 
+        width: 450px;
+@media screen and (max-width: 765px)
+    .table-item
+        width: 200px;
+@media screen and (max-width: 325px)
+    .table-item
+        width: 100px;
 .table-instruction
     grid-area: instruction
+    width: 100%;
+@media screen and (max-width: 859px)
+    .table-instruction
+        width: 350px;
+
+@media screen and (max-width: 325px)
+    .table-instruction
+        width: 250px;
+@media (min-width: 860px) and (max-width: 1200px)
+    .table-instruction
+        width: 550px;
 
 .box 
     align-items: center;
@@ -21,20 +56,38 @@ header
     grid-gap: 10px
     margin: 15px 0
     padding: 15px 20px
+@media screen and (max-width: 765px)
+    .box
+        grid-template-areas: "image title title " "image item item " "instruction instruction instruction"
+
 
 
 figure 
     width: 282px
     height: 282px
     margin-right: 16px
-    img
-        max-width: 100%
+@media screen and (max-width: 765px)
+    Figure
+        width: 135px;
+        height: 135px;
+img
+    max-width: 100%
 
 
 .ingredient 
     display: grid;
     grid-template-areas: "div div"
     grid-gap: 10px
+
+@media screen and (max-width: 765px)
+    .visualDesk
+        display: none
+    .visualMob
+        display: block
+
+@media screen and (min-width: 765px)
+    .visualMob
+        display: none
 
 
 

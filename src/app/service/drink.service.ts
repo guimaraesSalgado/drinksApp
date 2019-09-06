@@ -15,11 +15,7 @@ export class DrinkService {
        }
 
        getData() {
-        return this.http.get<Bebidas[]>(this.url)
-       }
-
-       detais(strDrink: string): Promise<any> {
-        return this.http.get(`${this.url}/drinks/${strDrink}`).toPromise();
+        return this.http.get<Bebidas[]>(this.url);
        }
 
        buscarDrink(strDrink: string): Promise<any> {

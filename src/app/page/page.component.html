@@ -25,7 +25,7 @@
             <div class="table-item">
                 <div class="itens">
                     <h3>Ingredientes:</h3>
-                    <div class="ingredient">
+                    <div class="ingredient visualDesk">
                         <div class="columnOne">
                             <h5 itemprop="ingredient">{{item?.strIngredient1}}</h5> 
                             <h5 itemprop="ingredient">{{item?.strIngredient2}}</h5>            
@@ -36,6 +36,9 @@
                             <h5 itemprop="ingredient">{{item?.strIngredient5}}</h5>
                             <h5 itemprop="ingredient">{{item?.strIngredient6}}</h5>
                         </div> 
+                    </div>
+                    <div class="ingredient visualMob">
+                        <h5 itemprop="ingredient">{{item?.strIngredient1}}, {{item?.strIngredient2}}, {{item?.strIngredient3}}  {{item?.strIngredient4}}</h5> 
                     </div>
                 </div>
             </div>

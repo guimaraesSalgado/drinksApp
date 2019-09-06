@@ -21,8 +21,6 @@ export class PageComponent implements OnInit {
       });
   }
 
-
-
   pesquisarDrink(event) {
     const bebida = event;
     this.drinkService.buscarDrink(bebida).then(res => {
@@ -30,6 +28,5 @@ export class PageComponent implements OnInit {
       console.log(res);
     });
   }
-
 
 }
